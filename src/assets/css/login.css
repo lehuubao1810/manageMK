@@ -1,0 +1,82 @@
+.loginPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20212C;
+}
+
+.login {
+    width: 31.25rem;
+    padding: 25px 50px;
+    background-color: #2B2C37;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login form {
+    width: 100%;
+}
+
+.login form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.login h1 {
+    font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.login label {
+    color: #a1a1a1;
+}
+.login input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #a1a1a1;
+    background-color: #2B2C37;
+    color: #fff
+}
+.login input:focus {
+    outline: none;
+    border-color: #635FC7;
+}
+.login button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #635FC7;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.registerLink a{
+    color: #635FC7;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.password {
+    position: relative;
+}
+.errorLog {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    color: #ea5555;
+    font-size: 0.75rem;
+}

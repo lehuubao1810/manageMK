@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+/* Tools */
+.tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+.category {
+  display: flex;
+  gap: 20px;
+  
+}
+.category__item {
+  cursor: pointer;
+  color: #a8a8a8;
+  font-weight: 500;
+}
+.category__item:hover {
+  color: #9583e6;
+  border-bottom: 2px solid #9583e6;
+}
+.category__item.active {
+  color: #7764ca;
+  border-bottom: 2px solid #7764ca;
+}
+
+
+/* Content */
+.container {
+  width: 100%;
+  min-height: 80vh;
+  max-height: 100%;
+  padding: 0 40px 40px 40px;
+  background-color: #f1f5fb;
+}
+.sortfunc {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  justify-content: flex-end;
+}
+.sort-box {
+  display: flex;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.sort-box .current-status-sort {
+  background-color: #fff;
+  color: #7764ca;
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+/* .sort-box .current-status-sort:hover {
+
+} */
+.sort-box .current-status-sort i {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.sort-box__options {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  color: #7764ca;
+  padding: 10px;
+  border-radius: 5px ;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.sort-box__item {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.sort-box__item:hover {
+  background-color: #7764ca;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* listImg */
+.listImg {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* loadingUpdate */
+.loadingUpdateBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.circle-loading {
+  width: 50px;
+  height: 50px;
+  border-radius: 99rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.circle-loading:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border: 4px solid transparent;
+  border-right-color: #7764ca;
+  border-bottom-color: #f1f5fb;
+  animation: circleLoading 1s forwards infinite linear;
+}
+
+@keyframes circleLoading {
+  to {
+    transform: rotate(360deg);
+  }
+}

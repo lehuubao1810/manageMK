@@ -1,0 +1,62 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalDelete {
+    width: 31.25rem;
+    padding: 35px;
+    background: #fff;
+    border-radius: 10px;
+    color: #7764ca;
+}
+
+.modalDelete .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ea5555;
+}
+
+.modalDelete .remind {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #a1a1a1;
+}
+
+.modalDelete .btnGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalDelete .btnGroup .btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.modalDelete .btnGroup .btnCancel {
+    background: #7764ca;
+    opacity: 0.9;
+    color: #fff;    
+}
+
+.modalDelete .btnGroup .btnDelete {
+    background: #ea5555;
+    color: #fff;
+}
+
+.modalDelete .btnGroup .btn:hover {
+    opacity: 0.8;
+}
