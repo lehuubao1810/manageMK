@@ -82,7 +82,9 @@
 .dragdrop:hover {
     background-color: #7764ca1a;
 }
-
+.dragover {
+    background-color: #7764ca1a;
+}
 .btnChooseFiles {
     font-weight: 600;
 }

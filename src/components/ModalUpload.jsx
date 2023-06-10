@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { collection, doc, updateDoc, arrayUnion, serverTimestamp, FieldValue } from 'firebase/firestore';
 import { format } from 'date-fns';
@@ -64,6 +64,15 @@ const ModalUpload = (props) => {
     }
   };
 
+  const dragdropRef = useRef(null)
+  const handleDragOver = () => {
+    dragdropRef.current.classList.add('dragover')
+  }
+
+  const handleDragLeave = () => {
+    dragdropRef.current.classList.remove('dragover')
+  }
+
   return (
     <div className="overlay" onClick={closeModal}>
       <div className="modalUpload" onClick={(e) => e.stopPropagation()}>
@@ -84,7 +93,7 @@ const ModalUpload = (props) => {
                 <option value="yearbook">Yearbook</option>
                 <option value="anniversary">Anniversary</option>
               </select>
-              <div className="dragdrop">
+              <div className="dragdrop" onDragOver={handleDragOver} onDragLeave={handleDragLeave} ref={dragdropRef}>
                 <i className="fas fa-cloud-upload-alt"></i>
                 <span>Drag & Drop your image here</span>
                 <p>or</p>
